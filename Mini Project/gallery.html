@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range Rover Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .scroll {
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .scroll-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .scroll-item {
+            min-width: 100%;
+        }
+
+        .scroll-item img {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .scroll-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .scroll-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .scroll-buttons button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .navbar {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    align-items: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: lightgrey;
+}
+.navbar {
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <h1>Range Rover</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="details.html">Car Details</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <h1 style="text-align: center;">Range Rover Gallery</h1>
+    <div class="scroll">
+        <div class="scroll-container" id="scrollContainer">
+            <div class="scroll-item"><img src="evoque1.jpg" alt="Range Rover Evoque"></div>
+            <div class="scroll-item"><img src="sport1.jpg" alt="Range Rover Sport"></div>
+            <div class="scroll-item"><img src="velar1.jpg" alt="Range Rover Velar"></div>
+            <div class="scroll-item"><img src="defender1.jpg" alt="Defender"></div>
+            <div class="scroll-item"><img src="classic.jpg" alt="Range Rover Classic"></div>
+        </div>
+        <div class="scroll-buttons">
+            <button onclick="navigate(-1)">&#8249;</button>
+            <button onclick="navigate(1)">&#8250;</button>
+        </div>
+    </div>
+
+    <script>
+        const scrollContainer = document.getElementById('scrollContainer');
+        let currentIndex = 0;
+
+        function navigate(direction) {
+            const items = scrollContainer.children.length;
+            currentIndex = (currentIndex + direction + items) % items;
+            scrollContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        setInterval(() => navigate(1), 3000); // Auto-scroll every 3 seconds
+    </script>
+</body>
+</html>
+
+    

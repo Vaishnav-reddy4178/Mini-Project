@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details - Range Rover</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <h1>Range Rover</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="details.html">Car Details</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="details-content">
+        <h2>Range Rover Models</h2>
+        <section id="features" class="features">
+        <h2>Features</h2>
+        <div class="feature-item">
+            <h3>Performance</h3>
+            <p>Unmatched power and handling with advanced suspension systems.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Luxury Interior</h3>
+            <p>Crafted with the finest materials, offering comfort and elegance.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Advanced Technology</h3>
+            <p>State-of-the-art infotainment system with connectivity options.</p>
+        </div>
+
+    </section>
+        <div class="car-card">
+            <h3>Range Rover Evoque</h3>
+            <p>Price: 67,00,000 Lakhs</p>
+            <img src="evoque.jpg" alt="Range Rover Evoque">
+            <button onclick="showDetails('Range Rover Evoque', 'Engine: 1997cc | Mileage: 15kmpl | Transmission: Automatic | Type : Diesel')">Check Details</button>
+            <div class="hover-box">
+                <p>Maximum speed (km/h)	213</p>
+                <p>Acceleration (s) 0-100 (km/h)	8.5 Sec</p>
+            </div>
+            <button onclick="bookTestDrive('Range Rover Evoque')">Book Test Drive</button>
+            <button onclick="bookCar('Range Rover Evoque')">Book Now</button>
+        </div>
+
+        <div class="car-card"> 
+            <h3>Range Rover Sport</h3>
+            <p>Price: 87,00,000 Lakhs</p>
+            <img src="sport.jpg" alt="Range Rover Sport">
+            <button onclick="showDetails('Range Rover Sport', 'Engine: 2997cc | Mileage: 12kmpl | Transmission: Automatic | Type : Petrol/Diesel')">Check Details</button>
+            <div class="hover-box">
+                <p>Maximum speed (km/h)	234</p>
+                <p>Acceleration (s) 0-100 km/h	5.9 Sec</p>
+            </div> 
+            <button onclick="bookTestDrive('Range Rover Sport')">Book Test Drive</button>
+            <button onclick="bookCar('Range Rover Sport')">Book Now</button>
+        </div>
+
+        <div class="car-card">
+            <h3>Range Rover Velar</h3>
+            <p>Price: 140,00,000 Lakhs</p>
+            <img src="velar.jpg" alt="Range Rover Velar">
+            <button onclick="showDetails('Range Rover Velar', 'Engine: 1997cc | Mileage: 15.8kmpl | Transmission: Automatic | Type : Petrol')">Check Details</button>
+            <div class = "hover-box">
+                <p>Maximum speed (km/h)	210</p>
+                <p>Acceleration (s) 0-100 km/h	8.3 Sec</p>
+            </div>
+            <button onclick="bookTestDrive('Range Rover Velar')">Book Test Drive</button>
+            <button onclick="bookCar('Range Rover Velar')">Book Now</button>
+        </div>
+
+        <div class="car-card">
+            <h3>Defender</h3>
+            <p>Price: 147,00,000 Lakhs</p>
+            <img src="defender.jpg" alt="defender">
+            <button onclick="showDetails('Defender', 'Engine: 4500cc | Mileage: 10kmpl | Transmission: Automatic | Type : Diesel')">Check Details</button>
+            <div class="hover-box">
+                <p>Maximum speed (km/h)	240</p>
+                <p>Acceleration (s) 0-100 (km/h)	5.7 Sec</p>
+            </div>
+            <button onclick="bookTestDrive('Defender')">Book Test Drive</button>
+            <button onclick="bookCar('Defender')">Book Now</button>
+        </div>
+    </main>
+
+    <section id="contact" class="contact">
+        <p><b>Range Rover is a British luxury car brand known for its excellence in design, innovation, and performance. Established in 1970, Range Rover has become synonymous with sophistication, off-road capability, and cutting-edge technology. With a rich heritage and global reputation, Range Rover continues to set new standards in the automotive industry.The Definition of Luxury Travel. Range Rover always Leads by example, with breathtaking modernity.The first generation was known as the Range Rover until almost the end of its production when Land Rover introduced the name Range Rover Classic to distinguish it from its successors.The original model served as the basis for the 1989 introduced 1st generation Discovery (directly based on the standard (short) wheelbase Range Rover), and for the 2nd generation Range Rover, based on the LWB chassis of the Classic.</b></p>
+        <form id="contactForm">
+            <h2 style="text-align: center;">Queries</h2>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+        <footer id="contact1">
+        <h2>Contact Us</h2>
+        <p>Email: info@rangerover.com</p>
+        <p>Phone: +1 234 567 890</p>
+        <p>© 2024 Range Rover. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
